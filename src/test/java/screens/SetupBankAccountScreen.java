@@ -3,7 +3,6 @@ package screens;
 import static glue.injector.util.getAlphaNumericString;
 
 import com.google.inject.Inject;
-import io.appium.java_client.AppiumDriver;
 import io.cucumber.guice.ScenarioScoped;
 import co.nvqa.appium.flutter.common.FlutterBy;
 import co.nvqa.appium.flutter.driver.AppiumFlutterDriver;
