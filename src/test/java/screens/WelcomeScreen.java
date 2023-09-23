@@ -6,6 +6,7 @@ import com.google.inject.Inject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import io.appium.java_client.AppiumBy;
 import io.cucumber.guice.ScenarioScoped;
 import co.nvqa.appium.flutter.common.FlutterBy;
 import co.nvqa.appium.flutter.driver.AppiumFlutterDriver;
@@ -27,8 +28,9 @@ public class WelcomeScreen extends BaseScreen {
   private WebElement getLogInButton() {
     switchToContext(driver,"NATIVE");
     String test = driver.getPageSource();
-    return driver.findElement(By.xpath("//android.view.View[@content-desc='Log in']"));
-   // return driver.findElement(FlutterBy.VALUE_KEY, "KEYS.welcomeLoginButton");
+    //return driver.findElement(By.xpath("//android.view.View[@content-desc='Log in']"));
+    return driver.findElement(new AppiumBy.ByAccessibilityId("Log in"));
+    // return driver.findElement(FlutterBy.VALUE_KEY, "KEYS.welcomeLoginButton");
   }
 
   private FlutterElement getUseAsGuestLink() {

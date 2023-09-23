@@ -5,6 +5,10 @@ import com.google.inject.Inject;
 
 import co.nvqa.appium.flutter.command.FlutterCommand;
 import co.nvqa.appium.flutter.common.Command;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
+import io.appium.java_client.android.nativekey.KeyEventFlag;
 import io.cucumber.guice.ScenarioScoped;
 import co.nvqa.appium.flutter.common.FlutterBy;
 import co.nvqa.appium.flutter.driver.AppiumFlutterDriver;
@@ -31,6 +35,25 @@ public class BaseScreen {
     params.put("action", "done");
     driver.executeScript("flutter:setTextEntryEmulation", true);
     driver.executeScript("flutter:sendTextInputAction", "done");
+
+
+  }
+  public void doneKeyboardNative() {
+//    driver.getPageSource();
+//   driver.pressKey(new KeyEvent(AndroidKey.ENTER));
+
+//    Map<String, Object> args = new HashMap<>();
+//    args.put("action", "search");
+//    driver.executeScript("mobile:performEditorAction",args);
+
+//    driver.pressKey(new KeyEvent(AndroidKey.SEARCH)
+//            .withFlag(KeyEventFlag.SOFT_KEYBOARD)
+//            .withFlag(KeyEventFlag.KEEP_TOUCH_MODE)
+//            .withFlag(KeyEventFlag.EDITOR_ACTION));
+
+    driver.pressKey(new KeyEvent(AndroidKey.TAB));
+    driver.pressKey(new KeyEvent(AndroidKey.ENTER));
+
   }
 
   protected FlutterElement getDropdownItem(String itemName) {

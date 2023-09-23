@@ -7,10 +7,10 @@ Feature: Account related scenarios
     And Dash Shipper taps 'Account' on bottom navigation bar
     And Dash Shipper navigates to 'Set up bank account' screen
     Then Dash Shipper sets up bank account with the following info:
-      | bankName          | BANK MEGA  |
-      | bankCode          | 426        |
-      | accountNumber     | 1293939334 |
-      | accountHolderName | Auto Name  |
+      | bankName          | ANZ INDONESIA  |
+      | bankCode          | 061            |
+      | accountNumber     | 1293939334     |
+      | accountHolderName | Auto Name      |
     And Dash Shipper verifies that the message: "<Message>" is displayed
 
     Examples:

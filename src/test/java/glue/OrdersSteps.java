@@ -14,9 +14,8 @@ public class OrdersSteps {
   private OrderDetailsScreen orderDetailsScreen;
   @When("Dash Shipper search orders with the text: {string} in orders screen")
   public void dashShipperSearchOrdersWithTheTextInOrdersScreen(String searchText) {
-    //ordersScreen.searchOrder(searchText);
+   // ordersScreen.searchOrder(searchText);
     ordersScreen.tabOnAnyOrderInList();
-
     orderDetailsScreen.cancelOrder();
   }
 

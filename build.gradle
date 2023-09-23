@@ -27,7 +27,7 @@ dependencies {
     testImplementation 'org.assertj:assertj-core:3.24.2'
     implementation 'com.github.javafaker:javafaker:1.0.2'
     implementation 'org.yaml:snakeyaml:1.33'
-    implementation 'co.nvqa:common-flutter-binding:1.0.2-RC1'
+    implementation 'co.nvqa:common-flutter-binding:1.0.1'
 }
 
 test {
